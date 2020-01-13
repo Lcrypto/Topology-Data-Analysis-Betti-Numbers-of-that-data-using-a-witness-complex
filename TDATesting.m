@@ -6,7 +6,7 @@
 % Relevant Papers/Books:
 % Silva, V. De, & Carlsson, G. (2004). Topological estimation using witness complexes.
 % Zomorodian, A. (2010). Fast construction of the Vietoris-Rips complex.
-% Computers & Graphics, 34(3), 263–271. doi:10.1016/j.cag.2010.03.007
+% Computers & Graphics, 34(3), 263â€“271. doi:10.1016/j.cag.2010.03.007
 % Algorithm from "Computational Topology: An Introduction, 2008 (H.Edelsbruneer & J.Harer)"
  
 % DISCLAIMER:
@@ -187,3 +187,51 @@ fprintf('Betti%1d: %1d\n',k-1,betti(k));
 end
 
 end
+
+
+example for article
+% 
+% function TDA
+% 
+% 
+% %load H_store_EPA.mat;
+% load H_store_ETU.mat;
+% residual=H_ls-H_idl;
+% %residual=H_idl;
+% data=imag(residual(1:12,1:79));
+% %%data=imag(residual(1:12,150:157));
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %Paths
+% addpath('SupportFunctions');
+% addpath('AnalyzeComplex');
+% addpath('CreateComplex');
+% addpath('Visualization');
+% addpath('VRComplex');
+% 
+% 
+% %General Parameters
+% 
+% N=size(data,1);
+% k=2;            %Order of simplices
+% 
+% R=0.9;          %Connectivity parameters (reduce R to decrease connectivity.)
+% v=3;            %A witness complex parameter.
+% n=N;            %nLandmarks (# of points used to aproximate full data set,
+%                 %            this can be either the full set or a subset
+%                 %            chosen using minimax sampling).
+%                 %For large datasets, it makes sense to use a small n for efficiency.
+% 
+% data=normalizeData(data);
+% landmarks=getLandmarksMinMax(data,n,N);
+% 
+% tic
+% betti=getBettiNumbers(data,landmarks,v,k,R,1);
+% toc
+% 
+% %Results
+% for k=1:size(betti,2)
+% fprintf('Betti%1d: %1d\n',k-1,betti(k));
+% end
+% 
+% end
