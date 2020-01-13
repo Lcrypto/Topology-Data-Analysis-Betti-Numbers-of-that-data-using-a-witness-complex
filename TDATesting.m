@@ -197,9 +197,9 @@ example for article
 % %load H_store_EPA.mat;
 % load H_store_ETU.mat;
 % residual=H_ls-H_idl;
-% %residual=H_idl;
-% data=imag(residual(1:12,1:79));
-% %%data=imag(residual(1:12,150:157));
+% %residual=H_idl; 
+% data=imag(residual(1:12,1:8));  % 8 RX
+% %%data=imag(residual(1:12,1:8));
 % 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %Paths
