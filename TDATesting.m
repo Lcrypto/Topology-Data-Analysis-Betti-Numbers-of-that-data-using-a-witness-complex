@@ -190,6 +190,24 @@ end
 
 
 example for article
+% RBs=1;
+% TX_ant=8;
+%  for i=1:size(H_idl,2)/TX_ant
+%     H_ideal_for_train_cmplx(:,1:TX_ant,1,i)=H_idl(:,(i-1)*TX_ant+1:i*TX_ant);
+%     H_ls_for_train_cmplx(:,1:TX_ant,1,i)=H_ls(:,(i-1)*TX_ant+1:i*TX_ant);    
+%  end
+% 
+%  for i=1:size(H_idl,2)/TX_ant
+%     H_ideal_for_train_real(:,1:TX_ant*2,1,i)=  [real(H_ideal_for_train_cmplx(:,1:TX_ant,1,i)) imag(H_ideal_for_train_cmplx(:,1:TX_ant,1,i))] ;
+%     H_ls_for_train_real(:,1:TX_ant*2,1,i)=[real( H_ls_for_train_cmplx(:,1:TX_ant,1,i)) imag( H_ls_for_train_cmplx(:,1:TX_ant,1,i))] ; 
+%  end  
+% Y_residual=H_ls_for_train_real-H_ideal_for_train_real;
+% B = squeeze(Y_residual(1:RBs*12,1:TX_ant*2,1,1));
+% data =B;
+
+
+
+
 % 
 % function TDA
 % 
