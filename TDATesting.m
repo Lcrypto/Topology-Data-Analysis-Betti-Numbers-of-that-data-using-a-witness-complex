@@ -148,6 +148,31 @@ data=[
 144 35
 169 8
 ];
+
+% To use instead of Wireless channel, correlation matrix of channel just
+% place your correlation matrix in corr_Mat and uncomment lines below
+
+% corr_Mat= 
+% [1     0.06  0.23  0.01  0.89
+%  0.06  1     0.74  0.01  0.61
+%  0.23  0.74  1     0.72  0.03
+%  0.01  0.01  0.72  1     0.7 
+%  0.89  0.61  0.03  0.7   1   
+% ];
+% 
+% threshold = 0;
+%   for i =1: size(corr_Mat,2)
+%      for j =1: size(corr_Mat,2)
+%       corr_Mat(i,j) = 1 - corr_Mat(i,j);
+%         if corr_Mat(i,j) > threshold    
+%          threshold = corr_Mat(i,j);
+%         end
+%      end
+%   end
+% data =corr_Mat;
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Paths
 addpath('SupportFunctions');
