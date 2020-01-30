@@ -278,3 +278,18 @@ example for article
 % end
 % 
 % end
+
+% frequency_domain=false;
+% % each frequency(subcariers domain) is center of ball, use this persistance homology 
+% % analysis when correlation not exist in space (antennas) like EPA/ETU etc
+% if frequency_domain
+% data = B;
+% num_landmark_points = RBs*12-1; 
+% end
+% 
+% % each antennas(space domain) is center of ball, use this persistance homology 
+% % analysis when correlation exist in space (antennas) like EPA/ETU etc
+% if ~frequency_domain
+% data = B';
+% num_landmark_points = size(data,1)-1; 
+% end
