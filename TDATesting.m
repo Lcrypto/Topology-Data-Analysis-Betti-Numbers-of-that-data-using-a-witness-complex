@@ -184,15 +184,15 @@ addpath('VRComplex');
 
 %General Parameters
 N=size(data,1);
-k=2;            %Order of simplices
+k=1;            %Order of simplices
 
 %Witness Complex Parameters 
 %NOTE: Any simplicial complex can be used.  
 % The Rips complex is probably the simplest to understand and read about. 
 % Zomorodian wrote a great paper about it (see reference above).
 
-R=0.4;          %Connectivity parameters (reduce R to decrease connectivity.)
-v=1;            %A witness complex parameter.
+R=0.9;          %Connectivity parameters (reduce R to decrease connectivity.)
+v=3;            %A witness complex parameter.
 n=N;            %nLandmarks (# of points used to aproximate full data set,
                 %            this can be either the full set or a subset
                 %            chosen using minimax sampling).
